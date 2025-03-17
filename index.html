@@ -3,12 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta SEO ajoutées -->
+
+    <!-- Meta SEO -->
     <meta
       name="description"
-      content="Portfolio de Nina Carducci, photographe professionnelle. Mariages, portraits, événements, entreprises."
+      content="Nina Carducci, photographe professionnelle à Bordeaux. Mariages, portraits, événements, entreprises. Appelez-nous au 05 56 67 78 89 ou rendez-vous au 68 avenue Alsace-Lorraine, 33200 Bordeaux. Ouvert du lundi au vendredi, de 10h à 19h."
     />
+    <meta name="robots" content="index, follow" />
     <meta name="author" content="Nina Carducci" />
+    <link rel="canonical" href="https://ninacarducci.com" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:type" content="local_business" />
+    <meta property="og:title" content="Nina Carducci Photographe - Bordeaux" />
+    <meta
+      property="og:description"
+      content="Photographe professionnelle à Bordeaux. Mariages, portraits, événements, entreprises. Contactez-nous au 05 56 67 78 89."
+    />
+    <meta property="og:url" content="https://ninacarducci.com" />
+    <meta
+      property="og:image"
+      content="https://ninacarducci.com/images/logo.jpg"
+    />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter (X) Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nina Carducci Photographe - Bordeaux" />
+    <meta
+      name="twitter:description"
+      content="Photographe professionnelle à Bordeaux. Mariages, portraits, événements, entreprises. Contactez-nous au 05 56 67 78 89."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ninacarducci.com/images/logo.jpg"
+    />
+    <meta name="twitter:site" content="@NinaCarducci" />
+
+    <!-- Rich Snippet JSON-LD (SEO Local) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Nina Carducci Photographe",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "68 avenue Alsace-Lorraine",
+          "postalCode": "33200",
+          "addressLocality": "Bordeaux",
+          "addressCountry": "FR"
+        },
+        "telephone": "+33556677889",
+        "openingHours": "Mo-Fr 10:00-19:00",
+        "url": "https://ninacarducci.com",
+        "image": "https://ninacarducci.com/images/logo.jpg"
+      }
+    </script>
 
     <!-- Préconnexion aux Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,12 +68,13 @@
       rel="stylesheet"
     />
 
-    <!-- CSS minifié -->
+    <!-- CSS  -->
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="./assets/style.css" />
 
     <title>Nina Carducci Photographe</title>
   </head>
+
   <body>
     <div class="top-header">
       <h3 class="name">Nina Carducci</h3>
@@ -297,7 +348,11 @@
     <div class="quote">
       <figure>
         <blockquote>
-          <h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
+          <h1 class="quote__text">
+            De manière inconsciente, je crois, je guette un regard, une
+            expression, des traits ou une nostalgie capable de résumer ou plus
+            exactement de révéler une vie
+          </h1>
         </blockquote>
         <figcaption class="quote__author">- Richard Avedon</figcaption>
       </figure>
@@ -306,24 +361,38 @@
       <div class="container">
         <div class="form-container">
           <h3>Une question ? Une demande de devis ?</h3>
-      <p>N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
+          <p>
+            N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
+          </p>
           <form action="" method="post">
             <label>Nom</label>
-        <input type="text" name="nom" id="nom">
+            <input type="text" name="nom" id="nom" />
             <label>Email</label>
-        <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" />
             <label>Message</label>
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <input type="submit" value="Envoyer">
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <input type="submit" value="Envoyer" />
           </form>
         </div>
         <div class="picture right">
-      <img src="./assets/images/camera.png" alt="Caméra" loading="lazy" width="500" height="500">
+          <img
+            src="./assets/images/camera.png"
+            alt="Caméra"
+            loading="lazy"
+            width="500"
+            height="500"
+          />
         </div>
       </div>
     </div>
-	<script src="https://code.jquery.com/jquery-3.4.1.js" defer></script>
-	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
-	<script src="./assets/maugallery.js" defer></script>
-	<script src="./assets/scripts.js" defer></script>  </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" defer></script>
+    <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
+    <script src="./assets/maugallery.js" defer></script>
+    <script src="./assets/scripts.js" defer></script>
+  </body>
 </html>
