@@ -5,11 +5,8 @@
     return this.each(function() {
       $.fn.mauGallery.methods.createRowWrapper($(this));
       if (options.lightBox) {
-        $.fn.mauGallery.methods.createLightBox(
-          $(this),
-          options.lightboxId,
-          options.navigation
-        );
+        // Crée la modale une seule fois (si elle n'existe pas déjà)
+        $.fn.mauGallery.methods.createLightBox($(this), options.lightboxId, options.navigation);
       }
       $.fn.mauGallery.listeners(options);
 
@@ -56,15 +53,17 @@
         return;
       }
     });
-
+  
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
-    $(".gallery").on("click", ".mg-prev", () =>
+    // Attacher les événements de navigation sur le document
+    $(document).on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
-    $(".gallery").on("click", ".mg-next", () =>
+    $(document).on("click", ".mg-next", () =>
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
   };
+  
   $.fn.mauGallery.methods = {
     createRowWrapper(element) {
       if (
@@ -114,12 +113,23 @@
       }
     },
     openLightBox(element, lightboxId) {
-      $(`#${lightboxId}`)
-        .find(".lightboxImage")
-        .attr("src", element.attr("src"));
-      $(`#${lightboxId}`).modal("toggle");
+      // Utilise "galleryLightbox" par défaut si aucune valeur n'est passée
+      var id = lightboxId ? lightboxId : "galleryLightbox";
+      // Si la modale n'existe pas encore dans le DOM, on la crée
+      if (!document.getElementById(id)) {
+        $.fn.mauGallery.methods.createLightBox($("body"), id, true);
+      }
+      var modalElement = document.getElementById(id);
+      if (!modalElement) {
+        console.error("Modal element with id " + id + " not found.");
+        return;
+      }
+      // Met à jour la source de l'image dans la modale
+      modalElement.querySelector(".lightboxImage").setAttribute("src", element.attr("src"));
+      // Utilise l'API Bootstrap 5 pour afficher la modale
+      var modalInstance = new bootstrap.Modal(modalElement);
+      modalInstance.show();
     },
-    // Modifier les fonctions prevImage et nextImage pour bien changer l'index
     prevImage(lightboxId) {
       let activeImage = null;
       $("img.gallery-item").each(function () {
@@ -150,11 +160,9 @@
         }
       });
     
-      // Move to previous image (circular navigation)
       let prevIndex = (index - 1 + imagesCollection.length) % imagesCollection.length;
       $(".lightboxImage").attr("src", $(imagesCollection[prevIndex]).attr("src"));
     },
-    
     nextImage(lightboxId) {
       let activeImage = null;
       $("img.gallery-item").each(function () {
@@ -185,40 +193,43 @@
         }
       });
     
-      // Move to next image (circular navigation)
       let nextIndex = (index + 1) % imagesCollection.length;
       $(".lightboxImage").attr("src", $(imagesCollection[nextIndex]).attr("src"));
-    }
-    ,
+    },
     createLightBox(gallery, lightboxId, navigation) {
-      gallery.append(`<div class="modal fade" id="${
-        lightboxId ? lightboxId : "galleryLightbox"
-      }" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            ${
-                              navigation
-                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
-                                : '<span style="display:none;" />'
-                            }
-                            <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
-                            ${
-                              navigation
-                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
-                                : '<span style="display:none;" />'
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>`);
+      var id = lightboxId ? lightboxId : "galleryLightbox";
+      // Vérifie si la modale existe déjà
+      if (document.getElementById(id)) {
+        return;
+      }
+      var modalHtml = `<div class="modal fade" id="${id}" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-body">
+                                ${
+                                  navigation
+                                    ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                                    : '<span style="display:none;" />'
+                                }
+                                <img class="lightboxImage img-fluid" alt="Contenu de l\'image affichée dans la modale au clic"/>
+                                ${
+                                  navigation
+                                    ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;">></div>'
+                                    : '<span style="display:none;" />'
+                                }
+                              </div>
+                            </div>
+                          </div>
+                        </div>`;
+      // Ajout de la modale dans le body pour garantir qu'elle soit visible
+      $("body").append(modalHtml);
     },
     showItemTags(gallery, position, tags) {
       var tagItems =
-        '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+        '<li class="nav-item"><span class="nav-link active active-tag" data-images-toggle="all">Tous</span></li>';
       $.each(tags, function(index, value) {
-        tagItems += `<li class="nav-item active">
-                <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
+        tagItems += `<li class="nav-item">
+                <span class="nav-link" data-images-toggle="${value}">${value}</span></li>`;
       });
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
 
@@ -235,8 +246,7 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active active-tag"); // Correction et ajout classe .active
-      
+      $(this).addClass("active active-tag");
 
       var tag = $(this).data("images-toggle");
 

@@ -1,105 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+  <!-- Ajout de l'attribut lang pour indiquer la langue du document -->
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Meta SEO -->
-    <meta
-      name="description"
-      content="Nina Carducci, photographe professionnelle à Bordeaux. Mariages, portraits, événements, entreprises. Appelez-nous au 05 56 67 78 89 ou rendez-vous au 68 avenue Alsace-Lorraine, 33200 Bordeaux. Ouvert du lundi au vendredi, de 10h à 19h."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Nina Carducci" />
-    <link rel="canonical" href="https://ninacarducci.com" />
+    <!-- Balise title descriptive pour le SEO -->
+    <title>Nina Carducci - Photographe professionnelle</title>
 
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
-    <meta property="og:type" content="local_business" />
-    <meta property="og:title" content="Nina Carducci Photographe - Bordeaux" />
-    <meta
-      property="og:description"
-      content="Photographe professionnelle à Bordeaux. Mariages, portraits, événements, entreprises. Contactez-nous au 05 56 67 78 89."
-    />
-    <meta property="og:url" content="https://ninacarducci.com" />
-    <meta
-      property="og:image"
-      content="https://ninacarducci.com/images/logo.jpg"
-    />
-    <meta property="og:locale" content="fr_FR" />
+    <!-- Meta description pour améliorer le taux de clics depuis les résultats de recherche -->
+    <meta name="description" content="Découvrez le portfolio et les services de Nina Carducci, photographe professionnelle. Contactez-la pour immortaliser vos moments précieux.">
 
-    <!-- Twitter (X) Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nina Carducci Photographe - Bordeaux" />
-    <meta
-      name="twitter:description"
-      content="Photographe professionnelle à Bordeaux. Mariages, portraits, événements, entreprises. Contactez-nous au 05 56 67 78 89."
-    />
-    <meta
-      name="twitter:image"
-      content="https://ninacarducci.com/images/logo.jpg"
-    />
-    <meta name="twitter:site" content="@NinaCarducci" />
+    <!-- Balise canonical pour éviter les problèmes de contenu dupliqué -->
+    <link rel="canonical" href="https://example.com/index.html">
 
-    <!-- Rich Snippet JSON-LD (SEO Local) -->
+    <!-- Balise meta robots pour clarifier l'indexation -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Balises Open Graph pour optimiser le partage sur les réseaux sociaux -->
+    <meta property="og:title" content="Nina Carducci - Photographe">
+    <meta property="og:description" content="Découvrez le portfolio et les services de Nina Carducci, photographe professionnelle.">
+    <meta property="og:image" content="https://example.com/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
+    <meta property="og:url" content="https://example.com/index.html">
+
+    <!-- Balise Twitter Card pour améliorer l'affichage lors du partage sur Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Nina Carducci - Photographe">
+    <meta property="og:description" content="Découvrez le portfolio et les services de Nina Carducci, photographe professionnelle.">
+    <meta property="og:image" content="https://example.com/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
+    <meta property="og:url" content="https://example.com/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Nina Carducci - Photographe">
+
+    <!-- Inclusion des feuilles de style -->
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!-- Préchargement des polices pour accélérer le rendu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+
+    <!-- Chargement différé des scripts pour améliorer les performances -->
+    <script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Ajout de defer pour différer l'exécution -->
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Ajout de defer -->
+    <script defer src="./assets/maugallery.js"></script>
+    <!-- Chargement différé du script maugallery -->
+    <script defer src="./assets/scripts.js"></script>
+    <!-- Chargement différé du script scripts -->
+
+    <!-- Données structurées JSON-LD pour améliorer le SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Nina Carducci Photographe",
+        "name": "Nina Carducci",
+        "url": "https://example.com/index.html",
+        "logo": "https://example.com/assets/images/nina.png",
+        "image": "https://example.com/assets/images/nina.png",
+        "telephone": "05 56 67 78 89",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "68 avenue Alsace-Lorraine",
-          "postalCode": "33200",
           "addressLocality": "Bordeaux",
+          "postalCode": "33200",
           "addressCountry": "FR"
         },
-        "telephone": "+33556677889",
         "openingHours": "Mo-Fr 10:00-19:00",
-        "url": "https://ninacarducci.com",
-        "image": "https://ninacarducci.com/images/logo.jpg"
+        "description": "Photographe professionnelle basée à Bordeaux."
       }
     </script>
-
-    <!-- Préconnexion aux Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS  -->
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
-
-    <title>Nina Carducci Photographe</title>
   </head>
 
   <body>
-    <div class="top-header">
-      <h3 class="name">Nina Carducci</h3>
-      <div class="nav">
+    <header class="top-header">
+      <!-- Utilisation d'une balise h1 pour le titre principal afin de renforcer la hiérarchie sémantique -->
+      <h1 class="name">Nina Carducci</h1>
+      <!-- Passage de h3 à h1 pour le titre principal -->
+      <nav class="nav">
         <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#services">Service</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" title="À propos">À propos</a></li>
+          <!-- Ajout d'attribut title pour améliorer l'accessibilité -->
+          <li><a href="#gallery" title="Galerie">Galerie</a></li>
+          <li><a href="#services" title="Services">Services</a></li>
+          <li><a href="#contact" title="Contact">Contact</a></li>
           <li>
             <a
               class="social-link"
               href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
               target="_blank"
-              ><img
-                src="assets/images/instagram.png"
-                alt="Lien Instagram"
-                loading="lazy"
-                width="20"
-                height="20"
-            /></a>
+              title="Instagram"
+            >
+              <img src="assets/images/instagram.png" alt="Logo Instagram">
+              <!-- Ajout d'un alt descriptif pour l'image -->
+            </a>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
 
     <div id="header">
       <div
@@ -131,34 +135,26 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
+            <!-- Amélioration de l'attribut alt pour décrire l'image -->
             <img
-              src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg"
+              src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
               class="d-block w-100"
-              alt="Passant dans la rue"
-              loading="lazy"
-              width="1920"
-              height="1080"
-            />
+              alt="Paysage par Ryoji Iwata"
+           >
           </div>
           <div class="carousel-item">
             <img
-              src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg"
+              src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp"
               class="d-block w-100"
-              alt="Homme en costume"
-              loading="lazy"
-              width="1920"
-              height="1080"
-            />
+              alt="Photo de nature par Nicholas Green"
+           >
           </div>
           <div class="carousel-item">
             <img
-              src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg"
+              src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
               class="d-block w-100"
-              alt="Couple mariage"
-              loading="lazy"
-              width="1920"
-              height="1080"
-            />
+              alt="Image par Edward Cisneros"
+           >
           </div>
         </div>
         <button
@@ -181,19 +177,13 @@
         </button>
       </div>
     </div>
-
     <div id="about">
       <div class="picture left">
-        <img
-          src="./assets/images/nina.png"
-          alt="Portrait de Nina Carducci"
-          loading="lazy"
-          width="500"
-          height="500"
-        />
+        <img src="./assets/images/nina.png" alt="Portrait de Nina Carducci">
+        <!-- Ajout d'un alt descriptif pour l'image -->
       </div>
       <div id="about-me">
-        <h3 class="about-me__title">A propos de moi</h3>
+        <h3 class="about-me__title">À propos de moi</h3>
         <h6 class="about-me__introduction">
           Devenir photographe était pour moi une évidence. Comme si j’y étais
           prédestiné. Saisir un moment, une émotion, une situation, un endroit,
@@ -216,74 +206,60 @@
       <h3 class="title">Portfolio</h3>
       <div class="container py-3">
         <div class="gallery" style="display: none">
-          <!-- Images optimisées -->
-          <img data-gallery-tag="Concert" class="gallery-item loading="lazy"
-          width="800" height="600""
-          src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"/>
-          <img
-            data-gallery-tag="Entreprises"
-            class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
-          />
-          <img
-            data-gallery-tag="Entreprises"
-            class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
-          />
-          <img
-            data-gallery-tag="Mariages"
-            class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"
-          />
-          <img
-            data-gallery-tag="Portrait"
-            class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"
-          />
-          <img
-            data-gallery-tag="Mariages"
-            class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
-          />
-          <img
-            data-gallery-tag="Portrait"
-            class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"
-          />
           <img
             data-gallery-tag="Concert"
             class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
-          />
+            src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
+            alt="Concert - Photo par Aaron Paul"
+         >
           <img
             data-gallery-tag="Entreprises"
             class="gallery-item"
-            loading="lazy"
-            width="800"
-            height="600"
-            src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
-          />
+            src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"
+            alt="Entreprise - Photo par Ali Morshedlou"
+         >
+          <img
+            data-gallery-tag="Entreprises"
+            class="gallery-item"
+            src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"
+            alt="Entreprise - Photo par Jason Goodman"
+         >
+          <img
+            data-gallery-tag="Mariages"
+            class="gallery-item"
+            src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"
+            alt="Mariage - Photo par Hannah Busing"
+         >
+          <img
+            data-gallery-tag="Portrait"
+            class="gallery-item"
+            src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"
+            alt="Portrait - Photo par Ade Tunji"
+         >
+          <img
+            data-gallery-tag="Mariages"
+            class="gallery-item"
+            src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"
+            alt="Mariage - Photo par Jakob Owens"
+         >
+          <img
+            data-gallery-tag="Portrait"
+            class="gallery-item"
+            src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp"
+            alt="Portrait - Photo par Nino Van Prattenburg"
+         >
+          <img
+            data-gallery-tag="Concert"
+            class="gallery-item"
+            src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
+            alt="Concert - Photo par Austin Neill"
+         >
+          <img
+            data-gallery-tag="Entreprises"
+            class="gallery-item"
+            src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"
+            alt="Entreprise - Photo par Mateus Campos"
+         >
         </div>
       </div>
       <div class="quote">
@@ -300,6 +276,7 @@
         </figure>
       </div>
     </div>
+
     <div id="services">
       <h3 class="title">Mes services</h3>
       <div class="container">
@@ -345,6 +322,7 @@
         </div>
       </div>
     </div>
+
     <div class="quote">
       <figure>
         <blockquote>
@@ -357,6 +335,7 @@
         <figcaption class="quote__author">- Richard Avedon</figcaption>
       </figure>
     </div>
+
     <div id="contact">
       <div class="container">
         <div class="form-container">
@@ -364,35 +343,24 @@
           <p>
             N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
           </p>
-          <form action="" method="post">
-            <label>Nom</label>
-            <input type="text" name="nom" id="nom" />
-            <label>Email</label>
-            <input type="email" name="email" id="email" />
-            <label>Message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <input type="submit" value="Envoyer" />
+          <form action="#" method="post">
+            <label for="nom">Nom</label>
+            <!-- Ajout de l'attribut for pour l'accessibilité -->
+            <input type="text" name="nom" id="nom">
+            <label for="email">Email</label>
+            <!-- Ajout de l'attribut for pour l'accessibilité -->
+            <input type="email" name="email" id="email">
+            <label for="message">Message</label>
+            <!-- Ajout de l'attribut for pour l'accessibilité -->
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <input type="submit" value="Envoyer">
           </form>
         </div>
         <div class="picture right">
-          <img
-            src="./assets/images/camera.png"
-            alt="Caméra"
-            loading="lazy"
-            width="500"
-            height="500"
-          />
+          <img src="./assets/images/camera.png" alt="Image de caméra">
+          <!-- Ajout d'un alt descriptif pour l'image -->
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" defer></script>
-    <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
-    <script src="./assets/maugallery.js" defer></script>
-    <script src="./assets/scripts.js" defer></script>
   </body>
 </html>
