@@ -1,6 +1,8 @@
 body {
 	max-width: 1920px;
 	margin: auto;
+	font-family: 'Inter', sans-serif;
+	font-display: swap;
 }
 * {
 	font-family: 'Inter';
@@ -71,6 +73,12 @@ body {
 	width: 100%;
 
 }
+
+.carousel-inner {
+	min-height: 800px;
+  }
+  
+
 #about-me {
 	flex: 2
 }
