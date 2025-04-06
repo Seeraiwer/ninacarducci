@@ -1,6 +1,7 @@
 body {
 	max-width: 1920px;
 	margin: auto;
+	
 }
 * {
 	font-family: 'Inter';
@@ -90,9 +91,6 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title{
 	text-align: center;
 	padding-block: 2em;
