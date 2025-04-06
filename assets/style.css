@@ -263,6 +263,19 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 
+  /* Fix des dimensions du carrousel pour éviter les images gigantesques */
+  .carousel-inner {
+    aspect-ratio: 3 / 2; /* Réserve un ratio fixe */
+    max-height: 700px; /* Limite la hauteur maximale */
+    overflow: hidden; /* Coupe le débordement */
+  }
+
+  .carousel-inner img {
+    object-fit: cover; /* Ajuste l'image sans la déformer */
+    height: 100%; /* Prend toute la hauteur du conteneur */
+    width: 100%; /* Prend toute la largeur */
+  }
+
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
@@ -393,17 +406,5 @@ input[type="submit"] {
 
   .picture {
     width: 80%;
-  }
-  /* Fix des dimensions du carrousel pour éviter les images gigantesques */
-  .carousel-inner {
-    aspect-ratio: 3 / 2; /* Réserve un ratio fixe */
-    max-height: 700px; /* Limite la hauteur maximale */
-    overflow: hidden; /* Coupe le débordement */
-  }
-
-  .carousel-inner img {
-    object-fit: cover; /* Ajuste l'image sans la déformer */
-    height: 100%; /* Prend toute la hauteur du conteneur */
-    width: 100%; /* Prend toute la largeur */
   }
 }
