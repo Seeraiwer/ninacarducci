@@ -13,7 +13,7 @@
     <meta name="description" content="Découvrez le portfolio et les services de Nina Carducci, photographe professionnelle. Contactez-la pour immortaliser vos moments précieux.">
 
     <!-- Balise canonical pour éviter les problèmes de contenu dupliqué -->
-    <link rel="canonical" href="https://example.com/index.html">
+    <link rel="canonical" href="https://seeraiwer.github.io/ninacarducci/index.html">
 
     <!-- Balise meta robots pour clarifier l'indexation -->
     <meta name="robots" content="index, follow">
@@ -21,8 +21,8 @@
     <!-- Balises Open Graph pour optimiser le partage sur les réseaux sociaux -->
     <meta property="og:title" content="Nina Carducci - Photographe">
     <meta property="og:description" content="Découvrez le portfolio et les services de Nina Carducci, photographe professionnelle.">
-    <meta property="og:image" content="https://example.com/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
-    <meta property="og:url" content="https://example.com/index.html">
+    <meta property="og:image" content="https://seeraiwer.github.io/ninacarducci/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
+    <meta property="og:url" content="https://seeraiwer.github.io/ninacarducci/index.html">
 
     <!-- Balise Twitter Card pour améliorer l'affichage lors du partage sur Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -30,21 +30,22 @@
     <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="Nina Carducci - Photographe">
     <meta property="og:description" content="Découvrez le portfolio et les services de Nina Carducci, photographe professionnelle.">
-    <meta property="og:image" content="https://example.com/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
-    <meta property="og:url" content="https://example.com/index.html">
+    <meta property="og:image" content="https://seeraiwer.github.io/ninacarducci/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">
+    <meta property="og:url" content="https://seeraiwer.github.io/ninacarducci/index.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Nina Carducci - Photographe">
 
     <!-- Inclusion des feuilles de style -->
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+    <link rel="preload" href="bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="bootstrap.min.css"></noscript>
     <link rel="stylesheet" href="./assets/style.css">
 
     <!-- Préchargement des polices pour accélérer le rendu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"></noscript>
     <!-- Chargement différé des scripts pour améliorer les performances -->
     <script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- Ajout de defer pour différer l'exécution -->
@@ -61,9 +62,9 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Nina Carducci",
-        "url": "https://example.com/index.html",
-        "logo": "https://example.com/assets/images/nina.png",
-        "image": "https://example.com/assets/images/nina.png",
+        "url": "https://seeraiwer.github.io/ninacarducci/index.html",
+        "logo": "https://seeraiwer.github.io/ninacarducci/assets/images/nina.png",
+        "image": "https://seeraiwer.github.io/ninacarducci/assets/images/nina.png",
         "telephone": "05 56 67 78 89",
         "address": {
           "@type": "PostalAddress",
