@@ -1,8 +1,6 @@
 body {
 	max-width: 1920px;
 	margin: auto;
-	font-family: 'Inter', sans-serif;
-	font-display: swap;
 }
 * {
 	font-family: 'Inter';
