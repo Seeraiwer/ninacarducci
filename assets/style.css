@@ -133,11 +133,11 @@ body {
   }
   
   .gallery-item {
+	position: absolute;
 	width: 100%;
-	height: auto;
-	display: block;
+	height: 100%;
+	object-fit: cover;
 	padding: .5em;
-	object-fit: contain;
   }
   
   .mg-prev,
