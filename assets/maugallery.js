@@ -64,16 +64,18 @@
     );
   };
   
-  // Navigation clavier avec les flèches gauche/droite
+  // Navigation clavier avec les flèches ← et →
   $(document).on("keydown", function(e) {
-    if ($("#" + options.lightboxId).hasClass("show")) {
-      if (e.key === "ArrowLeft") {
-        $.fn.mauGallery.methods.prevImage(options.lightboxId);
-      } else if (e.key === "ArrowRight") {
-        $.fn.mauGallery.methods.nextImage(options.lightboxId);
-      }
+    const isLightboxOpen = $(".modal.show").length > 0;
+    if (!isLightboxOpen) return;
+
+    if (e.key === "ArrowLeft") {
+      $.fn.mauGallery.methods.prevImage(options.lightboxId);
+    } else if (e.key === "ArrowRight") {
+      $.fn.mauGallery.methods.nextImage(options.lightboxId);
     }
   });
+
 
 
   $.fn.mauGallery.methods = {
