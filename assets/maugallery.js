@@ -64,6 +64,18 @@
     );
   };
   
+  // Navigation clavier avec les flèches gauche/droite
+  $(document).on("keydown", function(e) {
+    if ($("#" + options.lightboxId).hasClass("show")) {
+      if (e.key === "ArrowLeft") {
+        $.fn.mauGallery.methods.prevImage(options.lightboxId);
+      } else if (e.key === "ArrowRight") {
+        $.fn.mauGallery.methods.nextImage(options.lightboxId);
+      }
+    }
+  });
+
+
   $.fn.mauGallery.methods = {
     createRowWrapper(element) {
       if (
