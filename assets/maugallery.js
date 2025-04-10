@@ -64,20 +64,6 @@
     );
   };
   
-  // Navigation clavier avec les flèches ← et →
-  $(document).on("keydown", function(e) {
-    const isLightboxOpen = $(".modal.show").length > 0;
-    if (!isLightboxOpen) return;
-
-    if (e.key === "ArrowLeft") {
-      $.fn.mauGallery.methods.prevImage(options.lightboxId);
-    } else if (e.key === "ArrowRight") {
-      $.fn.mauGallery.methods.nextImage(options.lightboxId);
-    }
-  });
-
-
-
   $.fn.mauGallery.methods = {
     createRowWrapper(element) {
       if (
